@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mailbox Sender Report</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>Mailbox Sender Report</h1>
+    <p class="lede">Choose a Thunderbird account, scan its messages, and save an HTML report grouped by sender email address.</p>
+
+    <label for="account-select">Email account</label>
+    <select id="account-select"></select>
+
+    <label class="toggle">
+      <input id="include-sent" type="checkbox">
+      <span>Include Sent, Drafts, Templates, and Outbox folders</span>
+    </label>
+
+    <button id="scan-button" type="button">Scan And Save Report</button>
+
+    <div id="status" class="status" aria-live="polite"></div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

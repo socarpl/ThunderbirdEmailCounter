@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Mailbox Sender Report",
+  "version": "1.0.0",
+  "description": "Scan a selected Thunderbird account and export an HTML report showing how many emails you received from each sender address.",
+  "author": "OpenAI Codex",
+  "permissions": [
+    "accountsRead",
+    "messagesRead",
+    "downloads"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mailbox-sender-report@gmailscan.local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "Mailbox Sender Report",
+    "default_popup": "popup/popup.html"
+  }
+}
